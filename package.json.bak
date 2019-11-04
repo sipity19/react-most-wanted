@@ -13,7 +13,6 @@
     "chart.js": "2.x",
     "downshift": "3.x",
     "firebase": "7.x",
-    "firebase-functions": "^3.3.0",
     "firebaseui": "4.x",
     "fireform": "1.x",
     "firekit": "1.x",
@@ -54,7 +53,8 @@
     "redux-logger": "3.x",
     "redux-persist": "6.x",
     "redux-thunk": "2.x",
-    "rmw-shell": "https://github.com/sipity19/rmw-shell/archive/d6a9aff0bb725e191aaec5a10f0f056f5806ad95.tar.gz",
+    // "rmw-shell": "7.x", with my patch below
+    "rmw-shell": "https://github.com/sipity19/rmw-shell/archive/d6a9aff0bb725e191aaec5a10f0f056f5806ad95.zip",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "source-map-explorer": "2.x"
   },
