@@ -8,7 +8,13 @@ module.exports.runTest = async driver => {
   try {
     await driver.get('https://www.react-most-wanted.com')
 
+    await sleep(2000)
+
     var signInButton = driver.wait(webdriver.until.elementLocated(webdriver.By.name('signin')))
+
+    await signInButton.click()
+    await sleep(2000)
+
     var passwordButton = driver.wait(
       webdriver.until.elementLocated(
         webdriver.By.className(
@@ -16,8 +22,15 @@ module.exports.runTest = async driver => {
         )
       )
     )
+
+    await passwordButton.click()
+    await sleep(2000)
+
     var emailInput = driver.wait(webdriver.until.elementLocated(webdriver.By.name('email')))
-    var passwordInput = driver.wait(webdriver.until.elementLocated(webdriver.By.name('password')))
+
+    await emailInput.sendKeys('test@test.com')
+    await sleep(2000)
+
     var nextButton = driver.wait(
       webdriver.until.elementLocated(
         webdriver.By.className(
@@ -26,18 +39,17 @@ module.exports.runTest = async driver => {
       )
     )
 
-    await signInButton.click()
-    await sleep(2000)
-    await passwordButton.click()
-    await sleep(2000)
-    await emailInput.sendKeys('test@test.com')
-    await sleep(2000)
     await nextButton.click()
     await sleep(2000)
+
+    var passwordInput = driver.wait(webdriver.until.elementLocated(webdriver.By.name('password')))
+
     await passwordInput.sendKeys('123456')
     await sleep(2000)
+
     await passwordInput.sendKeys(webdriver.Key.ENTER)
     await sleep(2000)
+
     driver.quit()
   } catch (e) {
     console.log('Test Failed')
