@@ -16,14 +16,15 @@ const LPAsync = Loadable({
 
 const config = {
   firebase_config: {
-    apiKey: 'AIzaSyBQAmNJ2DbRyw8PqdmNWlePYtMP0hUcjpY',
-    authDomain: 'react-most-wanted-3b1b2.firebaseapp.com',
-    databaseURL: 'https://react-most-wanted-3b1b2.firebaseio.com',
-    projectId: 'react-most-wanted-3b1b2',
-    storageBucket: 'react-most-wanted-3b1b2.appspot.com',
-    messagingSenderId: '258373383650',
-    appId: '1:258373383650:web:b49ad5dd28da999a'
-  },
+    apiKey: "AIzaSyDTtmKLOftFGs_zBuSrAcZa5wo-Bp9sC4k",
+    authDomain: "rmvm-f22b5.firebaseapp.com",
+    databaseURL: "https://rmvm-f22b5.firebaseio.com",
+    projectId: "rmvm-f22b5",
+    storageBucket: "rmvm-f22b5.appspot.com",
+    messagingSenderId: "1015789156699",
+    appId: "1:1015789156699:web:e5ccee4db144fdfa4e827e",
+    measurementId: "G-096RVKD9VR"
+},
   firebase_config_dev: {
     apiKey: 'AIzaSyB31cMH9nJnERC1WCWA7lQHnY08voLs-Z0',
     authDomain: 'react-most-wanted-dev.firebaseapp.com',
@@ -33,7 +34,9 @@ const config = {
     messagingSenderId: '70650394824',
     appId: '1:70650394824:web:7cd3113c37741efc'
   },
-  firebase_providers: ['google.com', 'facebook.com', 'twitter.com', 'github.com', 'password', 'phone'],
+  // firebase_providers: ['google.com', 'facebook.com', 'twitter.com', 'github.com', 'password', 'phone'],
+  firebase_providers: ['google.com', 'facebook.com'],
+  signInFlow: 'redirect', // 'popup'
   initial_state: {
     themeSource: {
       isNightModeOn: true,
